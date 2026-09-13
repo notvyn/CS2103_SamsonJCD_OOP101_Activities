@@ -1,7 +1,19 @@
+// LABORATORY ACTIVITY 1 - OOP 101
+// Item #4 | Coding Exercise: Canteen Ordering System
+// Submitted By: John Calvin Samson
+
+/* Creator's Note: 
+This version explores the use of methods 
+and tries to utilize the DRY principle.
+
+KapeInitV2.java expounds more on the usage of 
+iterative structure solely through the main function.
+*/ 
+
 import java.util.Scanner;
 
 class KapeInit {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         displayMenu();
         
         while(true) {
@@ -10,8 +22,10 @@ class KapeInit {
             if (!isYes("\nDo you want to order again? (Y/N): ")) break;
         }
 
+        displayKapeAnimation();
+
         displayOrderSummary();
-        displayKapeArt();
+        
 
         sc.close();
     }
@@ -35,13 +49,13 @@ class KapeInit {
     };
 
     private static double[] menuPrice = {
-        3.00,
-        4.50,
-        5.50,
-        5.50,
-        5.00,
-        5.00,
-        5.00
+        39.99,
+        49.99,
+        54.99,
+        54.99,
+        59.99,
+        59.99,
+        59.99
     };
 
     /* CORE PROCESS OF TRANSACTION */ 
@@ -176,15 +190,47 @@ class KapeInit {
         System.out.println("-------------------------------");
     }
 
-    public static void displayKapeArt() {
-        System.out.println("""
+    public static void displayKapeAnimation() throws InterruptedException {
+        String[] frames = {
+            """
+              ( (
+               ) )     
+            ........
+            |      |]  Tasty Coffee, Happy Life 
+            \\      /      --- O(∩_∩)o ---
+             `----'
+            """,
 
-         ( (
-          ) )
-        ........
-        |      |]  Tasty Coffee, Happy Life 
-        \\      /      --- O(∩_∩)O ---
-         `----'
-        """);
+            """
+               ) )
+              ( (
+            ........
+            |      |]  Tasty Coffee, Happy Life 
+            \\      /      --- o(∩_∩)O ---
+             `----'
+            """
+        };
+        
+        System.out.println("Brewing your order...\n");
+
+        for (int i = 0; i < 8; i++) {
+
+            // Move to the beginning of the animation area
+            if (i > 0) {
+                System.out.print("\033[6A");
+            }
+
+            // Clear and redraw each line
+            for (String line : frames[i % frames.length].split("\n")) {
+                System.out.print("\033[2K");
+                System.out.println(line);
+            }
+
+            System.out.flush();
+            Thread.sleep(500);
+        }
+
+        // Move below the animation
+        System.out.print("\033[6B\n");
     }
 }
