@@ -1,3 +1,4 @@
+package Lesson_2.Pokemon;
 /* Scenario:
 You need to create a simple Java program to digitize a Pokémon trainer's team. You will model the core characteristics of a Pokémon and ensure their health points (HP) cannot be changed arbitrarily by outside forces.
 */
