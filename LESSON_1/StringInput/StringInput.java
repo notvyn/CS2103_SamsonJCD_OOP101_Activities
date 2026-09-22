@@ -1,3 +1,4 @@
+package Lesson_1.StringInput;
 import java.util.*;
 
 class StringInput{

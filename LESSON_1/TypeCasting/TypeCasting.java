@@ -1,3 +1,4 @@
+package Lesson_1.TypeCasting;
 class TypeCasting {
     public static void main(String[] args) {
         char ch = 'f'; // character 'f'

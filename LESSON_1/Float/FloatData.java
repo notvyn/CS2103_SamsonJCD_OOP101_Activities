@@ -1,3 +1,4 @@
+package Lesson_1.Float;
 class FloatData {
     public static void main(String[] args) {
         double num1 = 17.4;

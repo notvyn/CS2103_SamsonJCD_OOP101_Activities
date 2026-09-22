@@ -1,3 +1,4 @@
+package Lesson_1.StringCopying;
 class StringCopying {
     public static void main(String[] args) {
         String str1 = "Mademoiselle";

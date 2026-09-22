@@ -1,3 +1,4 @@
+package Lesson_1.KmToMeter;
 import java.util.Scanner;
 
 class KmToMeter{
