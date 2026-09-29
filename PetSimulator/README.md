@@ -1,5 +1,5 @@
 # Pet Duck Simulator (Java Console Game) 
-<img src="https://i.pinimg.com/originals/b2/ac/2f/b2ac2fe3435aab84a0c8d589d220d561.gif" alt="Duck Walking Animation GIF" height="150px" width="100%">
+<img src="https://i.pinimg.com/originals/b2/ac/2f/b2ac2fe3435aab84a0c8d589d220d561.gif" alt="Duck Walking Animation GIF" height="200px" width="100%">
 
 ## **Welcome to the World of Ducks !** <br>
 Experience having a pet duck for the first time, and witness how adorable and charming having one can be! Interact and enjoy a companion you never knew you want--- feed, play, and let it sleep in your care 'cause a pet is what brings joy :>
@@ -36,7 +36,7 @@ Enter Interaction:
 
 ## Developer's Note 
 > "It's not usual that we get to experience having a duck pet in our life, so why not try having one?"
-> — Created by: John Calvin Samson
+> — John Calvin Samson
 
 A fun way to practice fundamentals of Object-Oriented Programming in java. Potential Update coming soon! This includes:
 * Saving Process
@@ -44,4 +44,4 @@ A fun way to practice fundamentals of Object-Oriented Programming in java. Poten
 * Duck Animation and More Interactions
 * Dynamic Status Change
 
-*Still learning and exploring. If you ever want reach out, feel free to contact me on my [github account](https://github.com/notvyn) ;>*
+*Still learning and exploring. If you ever want to reach out, feel free to contact me on my [github account](https://github.com/notvyn) ;>*
