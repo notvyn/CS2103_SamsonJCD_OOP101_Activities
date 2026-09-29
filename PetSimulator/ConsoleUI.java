@@ -1,13 +1,28 @@
 package PetSimulator;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ConsoleUI {
     private Scanner sc = new Scanner(System.in);
 
     public int getUserChoice() {
-        System.out.print("Enter Interaction: ");
-        return sc.nextInt();
+        while (true) {
+            System.out.print("Choose an Interaction: ");
+            String rawChoice = sc.nextLine();
+            
+            try {
+                int choice = Integer.parseInt(rawChoice);
+
+                if (choice >= 1 && choice <= 4) {
+                    return choice;
+                } 
+
+                System.out.println("Please choose a number from 1 to 4.");
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid Input. Please enter a number.");
+            }
+        }
     }
 
     public void displayHeader(String message) {

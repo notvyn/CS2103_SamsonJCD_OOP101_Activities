@@ -1,20 +1,20 @@
 package PetSimulator;
 
-public class Pet {
+import java.io.Serializable; // enables class objects to transform into binary 
+
+public class Pet implements Serializable{
+    private static final long serialVersionUID = 1L;
+
     private String petName;
-    private int hunger;
     private int energy;
+    private int hunger;
     private int happiness;
 
     public Pet(String name) {
         this.petName = name;
-        this.hunger = 30;
         this.energy = 30;
+        this.hunger = 30;
         this.happiness = 30; 
-    }
-
-    public String getName() {
-        return this.petName;
     }
 
     private int limitStatus(int attribute) {
@@ -25,10 +25,14 @@ public class Pet {
         this.energy = limitStatus(energy);
         this.hunger = limitStatus(hunger);
         this.happiness = limitStatus(happiness);
-    } 
+    }
+
+    public String getName() {
+        return this.petName;
+    }
 
     public void displayStatus() {
-        System.out.println(getName());
+        System.out.println("--- " + getName() + " ---");
         System.out.printf("> Happiness: %d%n", this.happiness);
         System.out.printf("> Energy: %d%n", this.energy);
         System.out.printf("> Hunger: %d%n", this.hunger);
